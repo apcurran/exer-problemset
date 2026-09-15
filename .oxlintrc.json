@@ -6,7 +6,8 @@
     "oxc"
   ],
   "categories": {
-    "correctness": "warn"
+    "correctness": "warn",
+    "suspicious": "warn"
   },
   "rules": {},
   "env": {
