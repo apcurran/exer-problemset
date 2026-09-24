@@ -7,7 +7,6 @@
  * @returns {string}
  */
 export function toRna(dnaChars) {
-    // map DNA to RNA
     const dnaToRnaMap = new Map([
         ["G", "C"],
         ["C", "G"],
