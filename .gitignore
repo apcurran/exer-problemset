@@ -1,1 +1,9 @@
+# JS
 node_modules
+
+# IDEA editor for Java
+.idea/
+*.iml
+.gradle/
+build/
+out/
