@@ -28,30 +28,27 @@
 // };
 
 /**
+ * solution 2 -- recursion
+ * time: O(log n)
+ * space: O(log n)
  *
  * @param {number} num
  * @returns {number}
  */
-export const steps = (num) => {
+export const steps = (num, count = 0) => {
     if (num <= 0) {
         throw new Error("Only positive integers are allowed");
     }
 
-    let count = 0;
-
-    while (num !== 1) {
-        if (num % 2 === 0) {
-            // if even
-            num /= 2;
-            count++;
-        } else {
-            // if odd
-            num = num * 3 + 1;
-            count++;
-        }
+    if (num === 1) {
+        return count;
     }
 
-    return count;
+    if (num % 2 === 0) {
+        return steps(num / 2, count + 1);
+    } else {
+        return steps(num * 3 + 1, count + 1);
+    }
 };
 
 console.log(steps(1)); // 0
