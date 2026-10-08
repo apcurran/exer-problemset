@@ -5,7 +5,7 @@ class Badge {
         }
 
         if (department == null) {
-            return  "[" + id + "]" + " - " + name + " - " + "OWNER";
+            return "[" + id + "]" + " - " + name + " - " + "OWNER";
         }
 
         if (id == null) {
