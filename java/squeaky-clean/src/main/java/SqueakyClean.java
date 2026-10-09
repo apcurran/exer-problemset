@@ -21,6 +21,6 @@ class SqueakyClean {
 
     static void main(String[] args) {
         System.out.println(clean("my  id")); // "my__id"
-        System.out.println(clean("a-bc")); // "abc"
+        System.out.println(clean("a-bc")); // "aBc"
     }
 }
