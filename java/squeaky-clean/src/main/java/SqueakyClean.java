@@ -3,10 +3,10 @@ class SqueakyClean {
         StringBuilder cleanStr = new StringBuilder();
         boolean capitalizeNext = false;
 
-        // 3. Convert leetspeak to normal text
-        String convertedStr = convertLeetSpeak(dirtyStr);
+        for (char dirtyCh: dirtyStr.toCharArray()) {
+            // 3. Convert leetspeak to normal text
+            char ch = convertLeetSpeak(dirtyCh);
 
-        for (char ch: convertedStr.toCharArray()) {
             if (Character.isWhitespace(ch)) {
                 cleanStr.append('_');
             } else if (ch == '-') {
@@ -25,30 +25,19 @@ class SqueakyClean {
         return cleanStr.toString();
     }
 
-    static String convertLeetSpeak(String str) {
-        StringBuilder sb = new StringBuilder();
-
-        for (char ch: str.toCharArray()) {
-            if (ch == '4') {
-                sb.append('a');
-            } else if (ch == '3') {
-                sb.append('e');
-            } else if (ch == '0') {
-                sb.append('o');
-            } else if (ch == '1') {
-                sb.append('l');
-            } else if (ch == '7') {
-                sb.append('t');
-            } else {
-                sb.append(ch);
-            }
+    private static char convertLeetSpeak(char ch) {
+        if (ch == '4') {
+            return 'a';
+        } else if (ch == '3') {
+            return 'e';
+        } else if (ch == '0') {
+            return 'o';
+        } else if (ch == '1') {
+            return 'l';
+        } else if (ch == '7') {
+            return 't';
+        } else {
+            return ch;
         }
-
-        return sb.toString();
-    }
-
-    static void main(String[] args) {
-        System.out.println(clean("my  id")); // "my__id"
-        System.out.println(clean("a-bc")); // "aBc"
     }
 }
