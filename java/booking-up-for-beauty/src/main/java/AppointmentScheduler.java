@@ -14,7 +14,10 @@ class AppointmentScheduler {
     }
 
     public boolean isAfternoonAppointment(LocalDateTime appointmentDate) {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.isAfternoonAppointment() method");
+        // needs to be >= 12:00 noon AND < 18:00 evening
+        int hour = appointmentDate.getHour();
+
+        return hour >= 12 && hour < 18;
     }
 
     public String getDescription(LocalDateTime appointmentDate) {
