@@ -11,7 +11,12 @@ public class JedliksToyCar {
     }
 
     public String batteryDisplay() {
-        throw new UnsupportedOperationException("Please implement the JedliksToyCar.batteryDisplay()  method");
+        if (this.battery == 0) {
+            return "Battery empty";
+        }
+
+        // otherwise, return value
+        return "Battery at " + this.battery + "%";
     }
 
     public void drive() {
