@@ -20,6 +20,15 @@ public class JedliksToyCar {
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the JedliksToyCar.drive()  method");
+        // BEHAVIOR: covers 20 meters and drains one percent of the battery.
+        // Prevent driving when the battery is drained
+        if (this.battery == 0) {
+            return;
+        }
+
+        // Update the number of meters driven when driving
+        this.distance += 20;
+        // Update the battery percentage when driving
+        this.battery--;
     }
 }
