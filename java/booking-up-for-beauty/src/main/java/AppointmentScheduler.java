@@ -27,6 +27,8 @@ class AppointmentScheduler {
     }
 
     public LocalDate getAnniversaryDate() {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.getAnniversaryDate() method");
+        int year = LocalDateTime.now().getYear();
+
+        return LocalDate.of(year, 9, 15);
     }
 }
