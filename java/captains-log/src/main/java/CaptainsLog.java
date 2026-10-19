@@ -11,8 +11,7 @@ class CaptainsLog {
     }
 
     char randomPlanetClass() {
-        var random = new Random();
-        int randomInt = random.nextInt(CaptainsLog.PLANET_CLASSES.length);
+        int randomInt = this.randomNum.nextInt(CaptainsLog.PLANET_CLASSES.length);
 
         return CaptainsLog.PLANET_CLASSES[randomInt];
     }
