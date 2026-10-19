@@ -26,6 +26,10 @@ class CaptainsLog {
     }
 
     double randomStardate() {
-        throw new UnsupportedOperationException("Please implement the CaptainsLog.randomStardate() method");
+        double rangeStart = 41_000.0;
+        double rangeEnd = 42_000.0;
+        double rangeSize = rangeEnd - rangeStart;
+
+        return rangeStart + this.randomNum.nextDouble(rangeSize);
     }
 }
