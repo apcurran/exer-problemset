@@ -1,5 +1,3 @@
-import com.sun.source.tree.BreakTree;
-
 import java.util.Random;
 
 class CaptainsLog {
@@ -20,7 +18,12 @@ class CaptainsLog {
     }
 
     String randomShipRegistryNumber() {
-        throw new UnsupportedOperationException("Please implement the CaptainsLog.randomShipRegistryNumber() method");
+        int rangeStart = 1_000;
+        int rangeEnd = 10_000;
+        int rangeSize = rangeEnd - rangeStart;
+        int randomInt = rangeStart + this.randomNum.nextInt(rangeSize);
+
+        return "NCC-" + randomInt;
     }
 
     double randomStardate() {
