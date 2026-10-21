@@ -1,6 +1,8 @@
 class NeedForSpeed {
     private int speed;
     private int batteryDrain;
+    private int batteryPercentage = 100;
+    private int totalDistance;
     // constructor
     NeedForSpeed(int speed, int batteryDrain) {
         this.speed = speed;
@@ -8,15 +10,20 @@ class NeedForSpeed {
     }
 
     public boolean batteryDrained() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.batteryDrained() method");
+        return this.batteryPercentage < this.batteryDrain;
     }
 
     public int distanceDriven() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.distanceDriven() method");
+        return this.totalDistance;
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.drive() method");
+        if (this.batteryDrained()) {
+            return;
+        }
+        
+        this.totalDistance += this.speed;
+        this.batteryPercentage -= this.batteryDrain;
     }
 
     public static NeedForSpeed nitro() {
