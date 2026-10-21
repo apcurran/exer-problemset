@@ -9,7 +9,6 @@ public class LanguageList {
     }
 
     public void addLanguage(String language) {
-        // take lang and add to this.languages list
         this.languages.add(language);
     }
 
@@ -30,6 +29,6 @@ public class LanguageList {
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+        return this.languages.contains("Java") || this.languages.contains("Kotlin");
     }
 }
