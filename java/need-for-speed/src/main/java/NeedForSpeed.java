@@ -21,13 +21,13 @@ class NeedForSpeed {
         if (this.batteryDrained()) {
             return;
         }
-        
+
         this.totalDistance += this.speed;
         this.batteryPercentage -= this.batteryDrain;
     }
 
     public static NeedForSpeed nitro() {
-        throw new UnsupportedOperationException("Please implement the (static) NeedForSpeed.nitro() method");
+        return new NeedForSpeed(50, 4);
     }
 }
 
