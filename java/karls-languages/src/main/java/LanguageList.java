@@ -9,7 +9,8 @@ public class LanguageList {
     }
 
     public void addLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the addLanguage() method");
+        // take lang and add to this.languages list
+        this.languages.add(language);
     }
 
     public void removeLanguage(String language) {
