@@ -39,6 +39,12 @@ class RaceTrack {
     }
 
     public boolean canFinishRace(NeedForSpeed car) {
-        throw new UnsupportedOperationException("Please implement the RaceTrack.canFinishRace() method");
+        while (!car.batteryDrained()) {
+            // drive until battery is depleted
+            car.drive();
+        }
+
+        // have we gone far enough to cover the distance?
+        return car.distanceDriven() >= this.distance;
     }
 }
