@@ -13,7 +13,7 @@
         "fmt:check": "oxfmt --check"
     },
     "devDependencies": {
-        "oxfmt": "^0.68.0",
-        "oxlint": "^1.83.0"
+        "oxfmt": "^0.73.0",
+        "oxlint": "^1.88.0"
     }
 }
