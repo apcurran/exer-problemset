@@ -18,7 +18,7 @@ public class LanguageList {
     }
 
     public String firstLanguage() {
-        throw new UnsupportedOperationException("Please implement the firstLanguage() method");
+        return this.languages.getFirst();
     }
 
     public int count() {
