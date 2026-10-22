@@ -9,11 +9,6 @@ class Fighter {
     int getDamagePoints(Fighter fighter) {
         return 1;
     }
-
-
-    public String toString() {
-        return  "Fighter is a " + getClass().getSimpleName();
-    }
 }
 
 class Warrior extends Fighter {
@@ -26,6 +21,32 @@ class Warrior extends Fighter {
     int getDamagePoints(Fighter target) {
         return target.isVulnerable() ? 10 : 6;
     }
+
+    @Override
+    public String toString() {
+        return "Fighter is a Warrior";
+    }
 }
 
-// TODO: define the Wizard class
+class Wizard extends Fighter {
+    private boolean isSpellPrepared = false;
+
+    void prepareSpell() {
+        this.isSpellPrepared = true;
+    }
+
+    @Override
+    boolean isVulnerable() {
+        return !this.isSpellPrepared;
+    }
+
+    @Override
+    int getDamagePoints(Fighter target) {
+        return this.isSpellPrepared ? 12 : 3;
+    }
+
+    @Override
+    public String toString() {
+        return "Fighter is a Wizard";
+    }
+}
