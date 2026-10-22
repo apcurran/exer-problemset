@@ -21,7 +21,7 @@ class GottaSnatchEmAll {
             return new HashSet<>();
         }
 
-        Set<String> commonItems = new HashSet<>(collections.get(0));
+        Set<String> commonItems = new HashSet<>(collections.getFirst());
 
         for (Set<String> collection: collections) {
             commonItems.retainAll(collection);
@@ -31,6 +31,12 @@ class GottaSnatchEmAll {
     }
 
     static Set<String> allCards(List<Set<String>> collections) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.allCards() method");
+        Set<String> allItems = new HashSet<>();
+
+        for (Set<String> collection: collections) {
+            allItems.addAll(collection);
+        }
+
+        return allItems;
     }
 }
