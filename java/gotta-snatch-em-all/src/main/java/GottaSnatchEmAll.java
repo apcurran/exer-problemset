@@ -17,7 +17,17 @@ class GottaSnatchEmAll {
     }
 
     static Set<String> commonCards(List<Set<String>> collections) {
-        throw new UnsupportedOperationException("Please implement the (static) GottaSnatchEmAll.commonCards() method");
+        if (collections.isEmpty()) {
+            return new HashSet<>();
+        }
+
+        Set<String> commonItems = new HashSet<>(collections.get(0));
+
+        for (Set<String> collection: collections) {
+            commonItems.retainAll(collection);
+        }
+
+        return commonItems;
     }
 
     static Set<String> allCards(List<Set<String>> collections) {
