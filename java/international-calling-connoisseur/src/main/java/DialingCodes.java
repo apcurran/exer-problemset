@@ -18,8 +18,13 @@ public class DialingCodes {
     }
 
     public void addNewDialingCode(Integer code, String country) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        // check if code or country args exist as keys or values in map already
+        if (this.codes.containsKey(code) || this.codes.containsValue(country)) {
+            return;
+        }
+
+        // otherwise, add them to the map!
+        this.codes.put(code, country);
     }
 
     public Integer findDialingCode(String country) {
