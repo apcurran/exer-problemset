@@ -1,11 +1,12 @@
-class ProductionRemoteControlCar {
+class ProductionRemoteControlCar implements RemoteControlCar {
+    private int totalDistanceTravelled;
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.drive() method");
+        this.totalDistanceTravelled += 10;
     }
 
     public int getDistanceTravelled() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getDistanceTravelled() method");
+        return this.totalDistanceTravelled;
     }
 
     public int getNumberOfVictories() {
