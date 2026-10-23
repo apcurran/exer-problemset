@@ -39,7 +39,15 @@ public class DialingCodes {
     }
 
     public void updateCountryDialingCode(Integer code, String country) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        Integer oldCode = findDialingCode(country);
+
+        if (oldCode == null) {
+            return;
+        }
+
+        // remove oldCode
+        this.codes.remove(oldCode);
+        // update country's new dialing code and name accordingly
+        this.codes.put(code, country);
     }
 }
