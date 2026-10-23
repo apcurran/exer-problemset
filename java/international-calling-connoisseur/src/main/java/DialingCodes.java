@@ -10,13 +10,11 @@ public class DialingCodes {
     }
 
     public void setDialingCode(Integer code, String country) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        this.codes.put(code, country);
     }
 
     public String getCountry(Integer code) {
-        throw new UnsupportedOperationException(
-                "Delete this statement and write your own implementation.");
+        return this.codes.get(code);
     }
 
     public void addNewDialingCode(Integer code, String country) {
