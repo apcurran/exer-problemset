@@ -19,7 +19,12 @@ class CalculatorConundrum {
                 result = a * b;
                 break;
             case "/":
-                result = a / b;
+                try {
+                    result = a / b;
+                } catch (ArithmeticException e) {
+                    throw new IllegalOperationException("Division by zero is not allowed", e);
+                }
+
                 break;
             default:
                 throw new IllegalOperationException("Operation '" + operation + "' does not exist");
