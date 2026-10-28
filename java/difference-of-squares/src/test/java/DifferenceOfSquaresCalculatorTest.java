@@ -62,7 +62,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    @Disabled("Remove to run test")
     @Test
     @DisplayName("difference of squares 1")
     public void testDifferenceOfSquaresUpToOne() {
@@ -71,7 +70,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    @Disabled("Remove to run test")
     @Test
     @DisplayName("difference of squares 5")
     public void testDifferenceOfSquaresUpToFive() {
@@ -80,7 +78,6 @@ public class DifferenceOfSquaresCalculatorTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    @Disabled("Remove to run test")
     @Test
     @DisplayName("difference of squares 100")
     public void testDifferenceOfSquaresUpToHundred() {

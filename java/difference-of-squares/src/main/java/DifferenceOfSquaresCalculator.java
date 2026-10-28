@@ -6,7 +6,7 @@ class DifferenceOfSquaresCalculator {
         for (int i = 1; i <= input; i++) {
             sum += i;
         }
-        
+
         return sum * sum;
     }
 
@@ -22,7 +22,10 @@ class DifferenceOfSquaresCalculator {
     }
 
     int computeDifferenceOfSquares(int input) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        int squareOfSumTo = computeSquareOfSumTo(input);
+        int sumOfSquaresTo = computeSumOfSquaresTo(input);
+
+        return squareOfSumTo - sumOfSquaresTo;
     }
 
 }
