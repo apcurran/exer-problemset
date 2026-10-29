@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 class ResistorColorDuo {
-    private static String[] ALL_COLORS = {
+    private final static String[] ALL_COLORS = {
         "black",
         "brown",
         "red",
