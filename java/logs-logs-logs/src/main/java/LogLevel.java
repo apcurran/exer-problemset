@@ -14,4 +14,19 @@ public enum LogLevel {
         this.code = code;
         this.encoding = encoding;
     }
+
+    static LogLevel fromCode(String srcCode) {
+        for (LogLevel level : LogLevel.values()) {
+            if (level.code.equals(srcCode)) {
+                return level;
+            }
+        }
+
+        // fallback for unknown srcCode
+        return LogLevel.UNKNOWN;
+    }
+
+    int getEncoding() {
+        return this.encoding;
+    }
 }
