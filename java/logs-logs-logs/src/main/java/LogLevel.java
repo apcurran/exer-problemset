@@ -1,5 +1,5 @@
 public enum LogLevel {
-    UNKNOWN ("UNK", 0),
+    UNKNOWN("UNK", 0),
     TRACE("TRC", 1),
     DEBUG("DBG", 2),
     INFO("INF", 4),

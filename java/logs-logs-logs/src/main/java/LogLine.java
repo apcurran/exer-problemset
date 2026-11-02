@@ -15,6 +15,11 @@ public class LogLine {
     }
 
     public String getOutputForShortLog() {
-        throw new UnsupportedOperationException("Please implement the getOutputForShortLog() method");
+        LogLevel myLogLevel = getLogLevel();
+        int levelNum = myLogLevel.getEncoding();
+        int messageTextStartIndex = fullMessage.indexOf(":") + 2;
+        String messageText = fullMessage.substring(messageTextStartIndex);
+        
+        return levelNum + ":" + messageText;
     }
 }
