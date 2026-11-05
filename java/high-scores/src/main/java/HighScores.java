@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -19,9 +20,7 @@ class HighScores {
     }
 
     Integer personalBest() {
-        return myScores.stream()
-                .max(Integer::compare)
-                .orElseThrow();
+        return Collections.max(myScores);
     }
 
     List<Integer> personalTopThree() {
