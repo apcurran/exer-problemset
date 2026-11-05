@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 class HighScores {
@@ -24,7 +25,10 @@ class HighScores {
     }
 
     List<Integer> personalTopThree() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return myScores.stream()
+                .sorted(Comparator.reverseOrder())
+                .limit(3)
+                .toList();
     }
 
 }
