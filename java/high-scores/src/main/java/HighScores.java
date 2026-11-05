@@ -18,7 +18,9 @@ class HighScores {
     }
 
     Integer personalBest() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return myScores.stream()
+                .max(Integer::compare)
+                .orElseThrow();
     }
 
     List<Integer> personalTopThree() {

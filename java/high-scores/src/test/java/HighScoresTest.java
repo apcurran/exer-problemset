@@ -23,7 +23,6 @@ public class HighScoresTest {
     }
 
     @Test
-    @Disabled("Remove to run test")
     @DisplayName("Personal best")
     public void shouldReturnPersonalBest() {
         HighScores highScores = new HighScores(Arrays.asList(40, 100, 70));
@@ -89,7 +88,6 @@ public class HighScoresTest {
     }
 
     @Test
-    @Disabled("Remove to run test")
     @DisplayName("Latest score after personal best")
     public void callingLatestAfterPersonalBest() {
         HighScores highScores = new HighScores(Arrays.asList(20, 70, 15, 25, 30));
@@ -98,7 +96,6 @@ public class HighScoresTest {
     }
 
     @Test
-    @Disabled("Remove to run test")
     @DisplayName("Scores after personal best")
     public void callingScoresAfterPersonalBest() {
         HighScores highScores = new HighScores(Arrays.asList(20, 70, 15, 25, 30));
