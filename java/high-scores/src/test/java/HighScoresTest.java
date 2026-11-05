@@ -16,7 +16,6 @@ public class HighScoresTest {
     }
 
     @Test
-    @Disabled("Remove to run test")
     @DisplayName("Latest score")
     public void shouldReturnLatestAddedScore() {
         HighScores highScores = new HighScores(Arrays.asList(100, 0, 90, 30));

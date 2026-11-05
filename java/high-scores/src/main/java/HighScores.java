@@ -14,7 +14,7 @@ class HighScores {
     }
 
     Integer latest() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return myScores.getLast();
     }
 
     Integer personalBest() {
