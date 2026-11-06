@@ -3,7 +3,6 @@ import java.math.BigInteger;
 class Grains {
 
     BigInteger grainsOnSquare(final int square) {
-        // calc square + 1 for exponent of 2
         if (square < 1 || square > 64) {
             throw new IllegalArgumentException("square must be between 1 and 64");
         }
