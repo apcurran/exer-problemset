@@ -1,6 +1,7 @@
 import java.util.Map;
 
 class SpaceAge {
+    
     private static final double ONE_EARTH_YEAR_IN_SECONDS = 31_557_600;
     private static final Map<String, Double> planets = Map.of(
             "mercury", 0.2408467,
