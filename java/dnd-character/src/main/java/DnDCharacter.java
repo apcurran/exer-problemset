@@ -11,7 +11,6 @@ class DnDCharacter {
     private final int intelligence;
     private final int wisdom;
     private final int charisma;
-    private final int hitpoints;
 
     DnDCharacter() {
         strength = ability(rollDice());
@@ -20,7 +19,6 @@ class DnDCharacter {
         intelligence = ability(rollDice());
         wisdom = ability(rollDice());
         charisma = ability(rollDice());
-        hitpoints = 10 + constitutionModifier(constitution);
     }
 
     int ability(List<Integer> scores) {
@@ -83,6 +81,6 @@ class DnDCharacter {
     }
 
     int getHitpoints() {
-        return hitpoints;
+        return 10 + constitutionModifier(constitution);
     }
 }
