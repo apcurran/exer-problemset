@@ -164,7 +164,6 @@ public class DnDCharacterTest {
         assertThat(scores).containsExactly(1, 2, 3, 4);
     }
 
-    @Disabled("Remove to run test")
     @Test
     @DisplayName("random character is valid")
     public void testRandomCharacterIsValid() {
@@ -180,7 +179,6 @@ public class DnDCharacterTest {
         }
     }
 
-    @Disabled("Remove to run test")
     @Test
     @DisplayName("each ability is only calculated once")
     public void testEachAbilityIsOnlyCalculatedOnce() {
@@ -192,7 +190,6 @@ public class DnDCharacterTest {
         assertThat(dndCharacter.getCharisma()).isEqualTo(dndCharacter.getCharisma());
     }
 
-    @Disabled("Remove to run test")
     @Test
     @DisplayName("Each randomly created character should be unique in attributes")
     public void testUniqueCharacterIsCreated() {
