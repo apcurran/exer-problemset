@@ -7,13 +7,11 @@ class DnDCharacter {
 
     int ability(List<Integer> scores) {
         // recording the sum of the largest three dice
-
-        // get total
         int sum = scores.stream()
                 .mapToInt(Integer::intValue)
                 .sum();
         int smallest = Collections.min(scores);
-        // sub smallest
+
         return sum - smallest;
     }
 
